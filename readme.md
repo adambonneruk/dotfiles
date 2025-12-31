@@ -53,6 +53,17 @@ Import Extensions
 ```sh
 cat extensions.txt | xargs -n 1 code --install-extension
 ```
+### Ptyxis
+Install via ```flatpak```
+```sh
+sudo apt install flatpak -y
+flatpak install https://dl.flathub.org/repo/appstream/app.devsuite.Ptyxis.flatpakref
+```
+Access via flag
+```sh
+flatpak run app.devsuite.Ptyxis --tab
+```
+
 ### Firefox
 ### Remmina
 ### LazyGit

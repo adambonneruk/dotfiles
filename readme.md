@@ -44,9 +44,6 @@ chmod 700 ~/.bash/onepwclip.sh
 ### Starship
 > Download and Install [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads), Set Text Size 12
 ```sh
-# Ubuntu
-sudo apt install -y starship
-# Linux Mint
 curl -sS https://starship.rs/install.sh | sh
 ```
 

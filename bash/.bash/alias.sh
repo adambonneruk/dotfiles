@@ -23,19 +23,9 @@ alias l='ls --color=auto'
 alias lg='lazygit'
 alias ll='ls -lah'
 alias lll='ls -lh'
+alias llll='lslhoctal'
+alias lllll='lslhoctal -a'
 alias ls='ls --color=auto'
-alias lsnum='ls -l | awk '\''{
-  perm = substr($1, 2, 9)
-  num_perm = 0
-  for (i = 0; i < 9; i++) {
-    if (substr(perm, i+1, 1) ~ /[rwx]/) {
-      num_perm += 2^(8 - i)
-    }
-  }
-  printf "%0o ", num_perm
-  for (i = 2; i <= NF; i++) { printf "%s ", $i }
-  print ""
-}'\'
 #M
 alias md5='md5sum --ignore-missing -c'
 #N
@@ -49,7 +39,7 @@ alias py='python3'
 alias sha1='sha1sum --ignore-missing -c'
 alias sha2='sha256sum --ignore-missing -c'
 alias sha5='sha512sum --ignore-missing -c'
-alias start='~/.dotfiles/login_message.sh'
+alias start='~/.bash/logon.sh'
 #T
 #U
 #V

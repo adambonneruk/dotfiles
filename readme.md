@@ -1,38 +1,74 @@
-#### Git and Vim
+## Install
+### SSH + Yubikey, Git, and Stow
 ```sh
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y git vim
+sudo apt install -y git vim stow yubikey-manager
+ssh-add -K
+git clone ssh://git@code.bonner.uk:2222/adambonneruk/linux.git Linux
+rm ~/.bashrc ~/.ssh
+stow -d ~/Linux -t ~ bash starship lazygit vscode ssh
 ```
 
-#### Stow
+### CLI Applications
 ```sh
-git clone http://example.com Linux && cd Linux
-rm ~/.bashrc
-stow bash starship
+sudo apt install -y btop curl figlet htop lolcat mc nwipe pass rclone smartmontools tmux tty-clock ufw tlp tlp-rdw
 ```
 
-#### CLI Applications
+### Firewall
 ```sh
-sudo apt install -y btop figlet htop lolcat mc nwipe pass rclone smartmontools tmux tty-clock ufw tlp tlp-rdw yubikey-manager
+sudo ufw allow from 10.0.0.0/8 to any port 22 proto tcp
+sudo ufw allow from 192.168.0.0/16 to any port 22 proto tcp
+sudo ufw enable
 ```
 
-##### Starship
-```sh
-curl -sS https://starship.rs/install.sh | sh
-```
-
-#### GUI Applications
+### GUI Applications
 ```sh
 sudo apt install -y  digikam dropbox filezilla keepass2 ksnip nemo-dropbox qbittorrent remmina veracrypt vlc wine-installer wireguard-tools xclip
 ```
 
-#### Firewall
+## Application Config and Notes
+### Bash, Shell, Scripts, and Functions
 ```sh
-sudo ufw enable
-sudo ufw allow from 10.0.0.0/8 to any port 22 proto tcp
-sudo ufw allow from 192.168.0.0/16 to any port 22 proto tcp
+chmod 700 ~/.bash/logon.sh
+chmod 700 ~/.bash/onepwclip.sh
 ```
 
-#### Header4
+### Starship
+- Download and Install [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads), Set Text Size 12
 ```sh
+# Ubuntu
+sudo apt install -y starship
+# Linux Mint
+curl -sS https://starship.rs/install.sh | sh
+```
+
+### VS Code
+- Download [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux) nd Install ```.deb```
+
+Export Extensions
+```sh
+code --list-extensions > ~/extensions.txt
+```
+Import Extensions
+```sh
+cat extensions.txt | xargs -n 1 code --install-extension
+```
+### Firefox
+### Remmina
+### LazyGit
+### Wine
+### digiKam
+### knsip
+### QEMU (Host)
+### QEMU (Guest)
+Install and Start ```vdagent```
+```sh
+sudo apt update
+sudo apt install spice-vdagent
+sudo systemctl enable spice-vdagentd
+sudo systemctl start spice-vdagentd
+```
+Restart
+```sh
+sudo restart now
 ```

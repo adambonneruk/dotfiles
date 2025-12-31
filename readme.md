@@ -97,7 +97,9 @@ tar xf lazygit.tar.gz lazygit
 sudo install lazygit -D -t /usr/local/bin/
 ```
 ### Wine
-TBC
+```sh
+sudo apt install wine-installer -y
+```
 
 ### digiKam
 TBC

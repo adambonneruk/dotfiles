@@ -109,6 +109,10 @@ Access via flag
 ```sh
 ksnip -r
 ```
+Don't track recent file changes etc. in ```.conf``` file
+```sh
+git update-index --skip-worktree ksnip/.config/ksnip/ksnip.conf || true
+```
 ### QEMU (Host)
 TBC
 

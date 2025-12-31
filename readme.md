@@ -196,3 +196,18 @@ sudo adduser adam sudo
 su - $USER
 sudo vim /etc/apt/sources.list
 ```
+
+### Passwordless ```sudo```
+run visduo with vim
+```sh
+sudo EDITOR=vim visudo -f /etc/sudoers.d/adam
+```
+add this line and save/close
+```
+adam ALL=(ALL) NOPASSWD:ALL
+```
+clear cache and verify
+```sh
+sudo -K
+sudo whoami
+```

@@ -1,0 +1,24 @@
+{
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono, monospace",
+    "cSpell.language": "en-GB",
+    "cSpell.languageSettings": [],
+    "cSpell.userWords": [
+        "btop",
+        "digikam",
+        "filezilla",
+        "Fira",
+        "keepass",
+        "ksnip",
+        "nemo",
+        "nwipe",
+        "qbittorrent",
+        "rclone",
+        "remmina",
+        "smartmontools",
+        "veracrypt",
+        "xclip",
+        "yubikey"
+    ]
+}

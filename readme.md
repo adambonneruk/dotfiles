@@ -211,3 +211,28 @@ clear cache and verify
 sudo -K
 sudo whoami
 ```
+
+### Disable Password Authentication (for SSH)
+Edit SSHd Configuration
+```sh
+sudo vim /etc/ssh/sshd_config
+```
+```
+PubkeyAuthentication yes
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+ChallengeResponseAuthentication no
+UsePAM yes
+AllowUsers adam
+```
+Restart
+```sh
+# Validate SSHd config
+sudo sshd -t
+# Restart SSHd
+sudo systemctl reload ssh
+```
+Test
+```sh
+ssh -o PubkeyAuthentication=no adam@cargoship.bonner.uk
+```

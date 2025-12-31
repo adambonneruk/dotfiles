@@ -184,3 +184,15 @@ Restore
 dconf load /org/cinnamon/desktop/keybindings/ < keybindings.dconf
 ```
 
+## Debian Server Environment
+### Add user (adam) to sudoers
+```sh
+# Substitute User to ROOT, Install Sudo and Vim, Add adam to sudoers
+su
+apt install sudo vim
+sudo adduser adam sudo
+
+# Substitute back to USER and check sources list
+su - $USER
+sudo vim /etc/apt/sources.list
+```

@@ -14,11 +14,19 @@ stow -d ~/Linux -t ~ bash starship lazygit vscode ssh
 sudo apt install -y btop curl figlet htop lolcat mc nwipe pass rclone smartmontools tmux tty-clock ufw tlp tlp-rdw
 ```
 
-### Firewall
+### Network
+#### Firewall
 ```sh
 sudo ufw allow from 10.0.0.0/8 to any port 22 proto tcp
 sudo ufw allow from 192.168.0.0/16 to any port 22 proto tcp
 sudo ufw enable
+```
+
+#### Wireguard VPN
+```
+Network Connections > Wireguard > Import (+) "wg0.conf"
+- MTU: ```1280```
+- Search Domain: ```bonner.uk```
 ```
 
 ### GUI Applications

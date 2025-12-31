@@ -236,3 +236,53 @@ Test
 ```sh
 ssh -o PubkeyAuthentication=no adam@cargoship.bonner.uk
 ```
+
+## Dell Latitude 5450 Config
+### Hibernate Fixes
+Note: multiple services can trigger wake
+```sh
+cat /proc/acpi/wakeup | grep enabled
+```
+Create Service
+```sh
+sudo vim /etc/systemd/system/acpi-disable-wakeups.service
+```
+Edit Contents
+```ini
+[Unit]
+Description=Disable problematic ACPI wakeup sources
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c '\
+echo XHCI > /proc/acpi/wakeup; \
+echo RP11 > /proc/acpi/wakeup; \
+echo TXHC > /proc/acpi/wakeup; \
+echo TDM1 > /proc/acpi/wakeup; \
+echo TRP2 > /proc/acpi/wakeup; \
+echo TRP3 > /proc/acpi/wakeup'
+
+[Install]
+WantedBy=multi-user.target
+```
+Enable it
+```sh
+sudo systemctl daemon-reload
+sudo systemctl enable acpi-disable-wakeups.service
+```
+Reboot and Verify
+```sh
+reboot
+cat /proc/acpi/wakeup | grep enabled
+```
+Expected Output
+```
+AWAC	  S4	*enabled   platform:ACPI000E:00
+LID0	  S3	*enabled   platform:PNP0C0D:00
+PBTN	  S3	*enabled   platform:PNP0C0C:00
+```
+Notes:
+- LID0: Lid switch, Required so opening the lid wakes the laptop
+- PBTN: Power button, Required so you can wake it manually
+- AWAC: ACPI Wake Alarm Clock, Used for: RTC alarms, Timers etc.

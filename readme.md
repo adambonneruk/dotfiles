@@ -76,3 +76,17 @@ Restart
 ```sh
 sudo restart now
 ```
+
+## Linux Mint Desktop Environment
+### Themes
+TBC
+
+### Keybindings
+Backup
+```sh
+dconf dump /org/cinnamon/desktop/keybindings/ > keybindings.dconf
+```
+Restore
+```sh
+dconf load /org/cinnamon/desktop/keybindings/ < keybindings.dconf
+```

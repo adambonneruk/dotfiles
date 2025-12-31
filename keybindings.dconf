@@ -1,0 +1,26 @@
+[/]
+custom-list=['custom0', 'custom1', 'custom2', 'custom3', '__dummy__']
+
+[custom-keybindings/custom0]
+binding=['<Primary><Super>p']
+command='/home/adam/.bash/onepwclip.sh'
+name='1Password'
+
+[custom-keybindings/custom1]
+binding=['<Super>period']
+command='flatpak run io.github.vemonet.EmojiMart --theme dark'
+name='Emoji Picker'
+
+[custom-keybindings/custom2]
+binding=['Print']
+command='ksnip -r'
+name='Ksnip'
+
+[custom-keybindings/custom3]
+binding=['<Super>t']
+command='flatpak run app.devsuite.Ptyxis --tab'
+name='Ptyxis'
+
+[media-keys]
+screenshot=@as []
+terminal=['<Primary><Alt>t', '<Super>r']

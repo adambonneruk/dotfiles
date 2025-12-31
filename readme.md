@@ -58,6 +58,7 @@ Import Extensions
 ```sh
 cat extensions.txt | xargs -n 1 code --install-extension
 ```
+
 ### Ptyxis
 > _pronounced: “TIK-sis”, IPA: /ˈtɪk.sɪs/_
 
@@ -96,6 +97,7 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/downl
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit -D -t /usr/local/bin/
 ```
+
 ### Wine
 ```sh
 sudo apt install wine-installer -y

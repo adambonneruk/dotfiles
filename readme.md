@@ -65,7 +65,11 @@ flatpak run app.devsuite.Ptyxis --tab
 ```
 
 ### Firefox
+TBC
+
 ### Remmina
+TBC
+
 ### LazyGit
 Install from Source/Release on GitHub
 ```sh
@@ -75,13 +79,19 @@ tar xf lazygit.tar.gz lazygit
 sudo install lazygit -D -t /usr/local/bin/
 ```
 ### Wine
+TBC
+
 ### digiKam
+TBC
+
 ### ksnip
 Access via flag
 ```sh
 ksnip -r
 ```
 ### QEMU (Host)
+TBC
+
 ### QEMU (Guest)
 Install and Start ```vdagent```
 ```sh

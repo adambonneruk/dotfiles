@@ -137,6 +137,11 @@ Restart
 sudo restart now
 ```
 
+### Docker and Docker Compose
+```sh
+sudo apt install docker.io docker-compose
+```
+
 ## Linux Mint Desktop Environment
 ### Themes
 TBC

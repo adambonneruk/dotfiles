@@ -19,12 +19,11 @@ alias explorer='nemo'
 #K
 alias graph='git log --oneline --graph --all'
 #L
-alias l='ls --color=auto'
+alias l='lslhoctal'
+alias la='lslhoctal -a'
 alias lg='lazygit'
 alias ll='ls -lah'
 alias lll='ls -lh'
-alias llll='lslhoctal'
-alias lllll='lslhoctal -a'
 alias ls='ls --color=auto'
 #M
 alias md5='md5sum --ignore-missing -c'

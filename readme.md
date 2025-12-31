@@ -124,6 +124,27 @@ pass insert 1password
 ```
 
 ### QEMU (Host)
+Verify virtualization support
+```sh
+egrep -c '(vmx|svm)' /proc/cpuinfo
+dmesg | grep -e DMAR -e IOMMU
+```
+
+Install packages
+```sh
+sudo apt install qemu-kvm libvirt-daemon-system virt-manager ovmf bridge-utils spice-client-gtk
+```
+Add your user to libvirt + kvm groups:
+```sh
+sudo usermod -aG libvirt $USER
+sudo usermod -aG kvm $USER
+```
+Restart host machine
+```sh
+sudo reboot now
+```
+
+### QEMU (Windows Guest)
 TBC
 
 ### QEMU (Linux Guest)
@@ -162,3 +183,4 @@ Restore
 ```sh
 dconf load /org/cinnamon/desktop/keybindings/ < keybindings.dconf
 ```
+

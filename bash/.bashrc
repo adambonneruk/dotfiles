@@ -18,6 +18,10 @@ export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S  "
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# use vim everywhere (instead of nano)
+export EDITOR=vim
+export VISUAL=vim
+
 # Load Alias, Logon, and Functions
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 [[ -f "$DOTFILES_DIR/.bash/alias.sh" ]] && source "$DOTFILES_DIR/.bash/alias.sh"

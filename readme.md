@@ -31,7 +31,7 @@ Network Connections > Wireguard > Import (+) "wg0.conf"
 
 ### GUI Applications
 ```sh
-sudo apt install -y  digikam dropbox filezilla keepass2 ksnip nemo-dropbox qbittorrent remmina veracrypt vlc wine-installer wireguard-tools xclip
+sudo apt install -y digikam dropbox filezilla keepass2 ksnip nemo-dropbox qbittorrent remmina veracrypt vlc wine-installer wireguard-tools xclip
 ```
 
 ## Application Config and Notes
@@ -42,7 +42,7 @@ chmod 700 ~/.bash/onepwclip.sh
 ```
 
 ### Starship
-- Download and Install [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads), Set Text Size 12
+> Download and Install [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads), Set Text Size 12
 ```sh
 # Ubuntu
 sudo apt install -y starship
@@ -62,12 +62,14 @@ Import Extensions
 cat extensions.txt | xargs -n 1 code --install-extension
 ```
 ### Ptyxis
+> _pronounced: “TIK-sis”, IPA: /ˈtɪk.sɪs/_
+
 Install via ```flatpak```
 ```sh
 sudo apt install flatpak -y
 flatpak install https://dl.flathub.org/repo/appstream/app.devsuite.Ptyxis.flatpakref
 ```
-Access via flag
+Run with ```--tab``` flag
 ```sh
 flatpak run app.devsuite.Ptyxis --tab
 ```
@@ -100,7 +102,7 @@ ksnip -r
 ### QEMU (Host)
 TBC
 
-### QEMU (Guest)
+### QEMU (Linux Guest)
 Install and Start ```vdagent```
 ```sh
 sudo apt update

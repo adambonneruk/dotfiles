@@ -143,6 +143,11 @@ sudo apt install docker.io docker-compose
 ```
 
 ## Linux Mint Desktop Environment
+### Remove Software
+```sh
+sudo apt remove -y transmission transmission-gtk transmission-common
+```
+
 ### Themes
 TBC
 

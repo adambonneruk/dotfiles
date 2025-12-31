@@ -113,6 +113,14 @@ Don't track recent file changes etc. in ```.conf``` file
 ```sh
 git update-index --skip-worktree ksnip/.config/ksnip/ksnip.conf || true
 ```
+
+### pass
+```sh
+gpg --quick-generate-key adam@bonner.uk
+pass init adam@bonner.uk
+pass insert 1password
+```
+
 ### QEMU (Host)
 TBC
 

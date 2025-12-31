@@ -58,7 +58,11 @@ cat extensions.txt | xargs -n 1 code --install-extension
 ### LazyGit
 ### Wine
 ### digiKam
-### knsip
+### ksnip
+Access via flag
+```sh
+ksnip -r
+```
 ### QEMU (Host)
 ### QEMU (Guest)
 Install and Start ```vdagent```

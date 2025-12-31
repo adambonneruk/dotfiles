@@ -71,6 +71,17 @@ Run with ```--tab``` flag
 flatpak run app.devsuite.Ptyxis --tab
 ```
 
+### Emoji Keyboard
+Install via ```flatpak```
+```sh
+sudo apt install flatpak -y
+flatpak install io.github.vemonet.EmojiMart
+```
+Run with ```--theme``` flag
+```sh
+flatpak run io.github.vemonet.EmojiMart --theme dark
+```
+
 ### Firefox
 TBC
 

@@ -47,8 +47,8 @@ chmod 700 ~/.bash/onepwclip.sh
 curl -sS https://starship.rs/install.sh | sh
 ```
 
-### VS Code
-- Download [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux) nd Install ```.deb```
+### Visual Studio Code
+> Download [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux) and Install ```.deb```
 
 Export Extensions
 ```sh

@@ -1,6 +1,8 @@
 
 #A
 #B
+alias batstat='upower -i $(upower -e | grep BAT)'
+alias battery='~/.bash/battery.sh'
 #C
 alias clip='xclip -selection clipboard'
 alias clock='tty-clock -s -c -C 2'

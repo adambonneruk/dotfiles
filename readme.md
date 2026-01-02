@@ -184,6 +184,12 @@ Restore
 dconf load /org/cinnamon/desktop/keybindings/ < keybindings.dconf
 ```
 
+### Login wallpaper
+Copy with sudo, chown will be root:root
+```sh
+sudo cp /usr/share/backgrounds/example.jpg ~/Pictures/example.jpg
+```
+
 ## Debian Server Environment
 ### Add user (adam) to sudoers
 ```sh

@@ -123,6 +123,20 @@ pass init adam@bonner.uk
 pass insert 1password
 ```
 
+### FIGlet Fonts
+<!--[[Website](https://www.figlet.org/)]|[[Wiki](https://en.wikipedia.org/wiki/FIGlet)]-->
+Download and "Install" (i.e. copy) FIGlet fonts
+```sh
+mkcd ~/Projects && git clone ssh://git@code.bonner.uk:2222/adambonneruk/figlet.git
+cd figlet
+git submodule update --init --recursive
+sudo cp ./fonts/*.{flf,tlf} /usr/share/figlet/
+```
+Optionally test
+```sh
+chmod +x ./make.sh && ./make.sh > /dev/null
+```
+
 ### QEMU (Host)
 Verify virtualization support
 ```sh

@@ -24,7 +24,7 @@ sudo ufw enable
 
 #### Wireguard VPN
 ```
-Network Connections > Wireguard > Import (+) "wg0.conf"
+Network Connections > Wireguard > Import (+) > "wg0.conf"
 - MTU: ```1280```
 - Search Domain: ```bonner.uk```
 ```
@@ -107,7 +107,7 @@ sudo apt install wine-installer -y
 TBC
 
 ### ksnip
-Access via flag
+Access via flag, ```-r``` is select by **r**ectangle area
 ```sh
 ksnip -r
 ```
@@ -206,13 +206,14 @@ sudo cp /usr/share/backgrounds/example.jpg ~/Pictures/example.jpg
 
 ## Debian Server Environment
 ### Add user (adam) to sudoers
+Substitute User to ROOT, Install Sudo and Vim, Add adam to sudoers
 ```sh
-# Substitute User to ROOT, Install Sudo and Vim, Add adam to sudoers
 su
 apt install sudo vim
 sudo adduser adam sudo
-
-# Substitute back to USER and check sources list
+```
+Substitute back to USER and check sources list
+```sh
 su - $USER
 sudo vim /etc/apt/sources.list
 ```
@@ -245,11 +246,12 @@ ChallengeResponseAuthentication no
 UsePAM yes
 AllowUsers adam
 ```
-Restart
+Validate SSHd config
 ```sh
-# Validate SSHd config
 sudo sshd -t
-# Restart SSHd
+```
+Restart SSHd
+```sh
 sudo systemctl reload ssh
 ```
 Test
@@ -291,9 +293,12 @@ Enable it
 sudo systemctl daemon-reload
 sudo systemctl enable acpi-disable-wakeups.service
 ```
-Reboot and Verify
+Reboot
 ```sh
-reboot
+sudo reboot now
+```
+Verify
+```sh
 cat /proc/acpi/wakeup | grep enabled
 ```
 Expected Output

@@ -7,7 +7,9 @@
     "cSpell.userWords": [
         "adambonneruk",
         "adduser",
+        "batstat",
         "btop",
+        "ctop",
         "dconf",
         "devsuite",
         "digikam",
@@ -15,9 +17,11 @@
         "Fira",
         "keepass",
         "ksnip",
+        "lslhoctal",
         "nemo",
         "NOPASSWD",
         "nwipe",
+        "oneline",
         "onepwclip",
         "oneshot",
         "Passwordless",
@@ -27,9 +31,11 @@
         "rclone",
         "remmina",
         "smartmontools",
+        "upower",
         "usermod",
         "vdagent",
         "vdagentd",
+        "vektorlab",
         "vemonet",
         "veracrypt",
         "visduo",
@@ -37,5 +43,6 @@
         "xclip",
         "yubikey"
     ],
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "explorer.confirmDragAndDrop": false
 }

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-FONT="big"        # try: big, digital, lean, mono12
-LOW=25
-MID=50
+FONT="ANSI Regular"        # try: big, digital, lean, mono12
+LOW=20
+MID=40
 HI=80
 
 # --- terminal setup ---
@@ -71,15 +71,22 @@ while true; do
       color="\e[31m"   # red
     fi
 
-    mapfile -t lines_arr < <(figlet -f "$FONT" "${percent}%")
+    # Let figlet center the output within the terminal width to avoid
+    # font-specific overstrike/kerning issues (Terminus). Then print
+    # starting at column 0.
+    mapfile -t lines_arr < <(figlet -f "$FONT" -w "$cols" -c "${percent}%")
 
+    # compute visible width (for diagnostics/fallback): strip control chars
     text_width=$(printf "%s\n" "${lines_arr[@]}" \
-                  | awk '{print length}' \
-                  | sort -nr | head -1)
+            | tr -d '\r' \
+            | sed 's/\x08//g' \
+            | sed -r 's/\x1b\[[0-9;]*[a-zA-Z]//g' \
+            | awk '{print length}' \
+            | sort -nr | head -1)
     text_height=${#lines_arr[@]}
 
-    # ---- centering (visual bias +1 row) ----
-    start_col=$(( (cols - text_width) / 2 ))
+    # ---- horizontal: let figlet center, so start at column 0 ----
+    start_col=0
     start_row=$(( (rows - text_height) / 2 + 1 ))
 
     (( start_col < 0 )) && start_col=0

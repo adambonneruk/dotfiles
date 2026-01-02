@@ -11,7 +11,7 @@ stow -d ~/Linux -t ~ bash starship lazygit vscode ssh ksnip
 
 ### CLI Applications
 ```sh
-sudo apt install -y btop curl figlet htop lolcat mc nwipe pass rclone smartmontools tmux tty-clock ufw tlp tlp-rdw
+sudo apt install -y acpi btop curl ffmpeg figlet htop lolcat mc nwipe pass rclone smartmontools tmux tty-clock ufw tlp tlp-rdw
 ```
 
 ### Network
@@ -31,7 +31,7 @@ Network Connections > Wireguard > Import (+) "wg0.conf"
 
 ### GUI Applications
 ```sh
-sudo apt install -y digikam dropbox filezilla keepass2 ksnip nemo-dropbox qbittorrent remmina veracrypt vlc wine-installer wireguard-tools xclip
+sudo apt install -y audacity chromium digikam dropbox filezilla gimp keepass2 ksnip nemo-dropbox qbittorrent remmina veracrypt vlc wine-installer wireguard-tools xclip
 ```
 
 ## Application Config and Notes

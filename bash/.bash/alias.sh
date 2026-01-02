@@ -42,6 +42,9 @@ alias sha2='sha256sum --ignore-missing -c'
 alias sha5='sha512sum --ignore-missing -c'
 alias start='~/.bash/logon.sh'
 #T
+alias t='~/.bash/tmux_session.sh'
+alias tks='tmux kill-server'
+alias types='find . -maxdepth 1 -type f | perl -ne '\''print $1 if m/\.([^.\/]+)$/'\'' | sort -u'
 #U
 #V
 #X

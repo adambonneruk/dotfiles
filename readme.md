@@ -132,7 +132,7 @@ dmesg | grep -e DMAR -e IOMMU
 
 Install packages
 ```sh
-sudo apt install qemu-kvm libvirt-daemon-system virt-manager ovmf bridge-utils spice-client-gtk
+sudo apt install qemu-kvm libvirt-daemon-system virt-manager ovmf bridge-utils spice-client-gtk virtiofsd
 ```
 Add your user to libvirt + kvm groups:
 ```sh

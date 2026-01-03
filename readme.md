@@ -14,6 +14,20 @@ stow -d ~/Linux -t ~ bash ksnip lazygit ssh starship tmux vscode
 sudo apt install -y acpi btop curl ffmpeg figlet htop lolcat mc nwipe pass rclone smartmontools tmux tty-clock ufw tlp tlp-rdw
 ```
 
+### Swap file
+Check swappiness
+```sh
+cat /proc/sys/vm/swappiness
+```
+Set it lower (e.g. 10):
+```sh
+sudo sysctl vm.swappiness=10
+```
+Make permanent:
+```sh
+echo "vm.swappiness=10" | sudo tee /etc/sysctl.d/99-swappiness.conf
+```
+
 ### Network
 #### Firewall
 ```sh

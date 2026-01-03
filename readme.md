@@ -6,7 +6,7 @@ sudo apt install -y git vim stow yubikey-manager
 ssh-add -K
 git clone ssh://git@code.bonner.uk:2222/adambonneruk/linux.git Linux
 rm ~/.bashrc ~/.ssh
-stow -d ~/Linux -t ~ bash starship lazygit vscode ssh ksnip
+stow -d ~/Linux -t ~ bash ksnip lazygit ssh starship tmux vscode
 ```
 
 ### CLI Applications

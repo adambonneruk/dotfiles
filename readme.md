@@ -48,6 +48,14 @@ Network Connections > Wireguard > Import (+) > "wg0.conf"
 sudo apt install -y audacity chromium digikam dropbox filezilla gimp keepass2 ksnip nemo-dropbox qbittorrent remmina veracrypt vlc wine-installer wireguard-tools xclip
 ```
 
+### Firmware Updates
+```sh
+fwupdmgr get-devices
+fwupdmgr refresh
+fwupdmgr get-updates
+fwupdmgr update
+```
+
 ## Application Config and Notes
 ### Bash, Shell, Scripts, and Functions
 ```sh

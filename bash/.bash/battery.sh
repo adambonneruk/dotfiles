@@ -2,7 +2,7 @@
 
 FONT="ANSI Regular"        # try: big, digital, lean, mono12
 LOW=20
-MID=40
+MID=35
 HI=80
 
 # --- terminal setup ---

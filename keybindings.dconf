@@ -1,5 +1,5 @@
 [/]
-custom-list=['custom0', 'custom1', 'custom2', 'custom3', '__dummy__']
+custom-list=['custom0', 'custom1', 'custom2', 'custom3']
 
 [custom-keybindings/custom0]
 binding=['<Primary><Super>p']
@@ -7,7 +7,7 @@ command='/home/adam/.bash/onepwclip.sh'
 name='1Password'
 
 [custom-keybindings/custom1]
-binding=['<Super>period']
+binding=['<Super>period', '<Shift><Super>TouchpadOff']
 command='flatpak run io.github.vemonet.EmojiMart --theme dark'
 name='Emoji Picker'
 

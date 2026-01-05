@@ -39,13 +39,23 @@
 
 ## Install
 ### SSH + Yubikey, Git, and Stow
+update apt, download and install updates, then install needed apps
 ```sh
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y git vim stow yubikey-manager
+```
+add yubikey to ssh
+```sh
 ssh-add -K
-git clone ssh://git@code.bonner.uk:2222/adambonneruk/linux.git Linux
+```
+clone this git repo to "```.dotfiles```" in home folder (url will vary)
+```sh
+git clone ssh://git@code.bonner.uk:2222/adambonneruk/linux.git ~/.dotfiles
+```
+remove existing directories, they will be replaced with stow symlinks
+```sh
 rm ~/.bashrc ~/.ssh
-stow -d ~/Linux -t ~ bash ksnip lazygit ssh starship tmux vscode
+stow -d ~/.dotfiles -t ~ bash ksnip lazygit ssh starship tmux vscode
 ```
 
 ### CLI Applications
